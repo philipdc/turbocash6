@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TurboCASH 6 - Open Source Accounting and Financial Management">
+    <meta name="keywords" content="accounting, finance, bookkeeping, open-source">
+    <meta name="author" content="Philip Copeman">
+    <title>TurboCASH 6 - Dashboard</title>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components.css">
+    
+    <!-- Favicon (placeholder) -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header__container">
+            <div class="header__brand">
+                <h1 class="header__logo">TurboCASH 6</h1>
+                <span class="header__tagline">Financial Management</span>
+            </div>
+            
+            <nav class="header__nav">
+                <button class="header__menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+            
+            <div class="header__user">
+                <span class="header__username">Guest User</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <nav class="sidebar__nav">
+                <ul class="sidebar__menu">
+                    <li class="sidebar__item sidebar__item--active">
+                        <a href="/" class="sidebar__link">
+                            <span class="sidebar__icon">📊</span>
+                            <span class="sidebar__text">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="sidebar__item">
+                        <a href="/accounts.html" class="sidebar__link">
+                            <span class="sidebar__icon">💰</span>
+                            <span class="sidebar__text">Accounts</span>
+                        </a>
+                    </li>
+                    <li class="sidebar__item">
+                        <a href="/transactions.html" class="sidebar__link">
+                            <span class="sidebar__icon">📝</span>
+                            <span class="sidebar__text">Transactions</span>
+                        </a>
+                    </li>
+                    <li class="sidebar__item">
+                        <a href="/reports.html" class="sidebar__link">
+                            <span class="sidebar__icon">📈</span>
+                            <span class="sidebar__text">Reports</span>
+                        </a>
+                    </li>
+                    <li class="sidebar__item">
+                        <a href="/settings.html" class="sidebar__link">
+                            <span class="sidebar__icon">⚙️</span>
+                            <span class="sidebar__text">Settings</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Page Header -->
+            <div class="page-header">
+                <h2 class="page-header__title">Dashboard</h2>
+                <div class="page-header__actions">
+                    <button class="btn btn--primary">New Transaction</button>
+                </div>
+            </div>
+
+            <!-- Dashboard Statistics -->
+            <section class="stats">
+                <div class="stats__grid">
+                    <div class="stat-card stat-card--revenue">
+                        <div class="stat-card__icon">💵</div>
+                        <div class="stat-card__content">
+                            <h3 class="stat-card__label">Total Revenue</h3>
+                            <p class="stat-card__value">$0.00</p>
+                            <span class="stat-card__change stat-card__change--positive">+0%</span>
+                        </div>
+                    </div>
+
+                    <div class="stat-card stat-card--expenses">
+                        <div class="stat-card__icon">💳</div>
+                        <div class="stat-card__content">
+                            <h3 class="stat-card__label">Total Expenses</h3>
+                            <p class="stat-card__value">$0.00</p>
+                            <span class="stat-card__change stat-card__change--negative">+0%</span>
+                        </div>
+                    </div>
+
+                    <div class="stat-card stat-card--profit">
+                        <div class="stat-card__icon">📊</div>
+                        <div class="stat-card__content">
+                            <h3 class="stat-card__label">Net Profit</h3>
+                            <p class="stat-card__value">$0.00</p>
+                            <span class="stat-card__change stat-card__change--positive">+0%</span>
+                        </div>
+                    </div>
+
+                    <div class="stat-card stat-card--balance">
+                        <div class="stat-card__icon">🏦</div>
+                        <div class="stat-card__content">
+                            <h3 class="stat-card__label">Cash Balance</h3>
+                            <p class="stat-card__value">$0.00</p>
+                            <span class="stat-card__change">0 accounts</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Recent Transactions -->
+            <section class="section">
+                <div class="section__header">
+                    <h3 class="section__title">Recent Transactions</h3>
+                    <a href="/transactions.html" class="section__link">View All →</a>
+                </div>
+                
+                <div class="table-container">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Description</th>
+                                <th>Account</th>
+                                <th>Amount</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td colspan="5" class="table__empty">
+                                    No transactions yet. Click "New Transaction" to get started.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Quick Actions -->
+            <section class="section">
+                <div class="section__header">
+                    <h3 class="section__title">Quick Actions</h3>
+                </div>
+                
+                <div class="quick-actions">
+                    <button class="quick-action">
+                        <span class="quick-action__icon">➕</span>
+                        <span class="quick-action__text">New Transaction</span>
+                    </button>
+                    <button class="quick-action">
+                        <span class="quick-action__icon">💰</span>
+                        <span class="quick-action__text">New Account</span>
+                    </button>
+                    <button class="quick-action">
+                        <span class="quick-action__icon">📊</span>
+                        <span class="quick-action__text">Generate Report</span>
+                    </button>
+                    <button class="quick-action">
+                        <span class="quick-action__icon">📥</span>
+                        <span class="quick-action__text">Import Data</span>
+                    </button>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__container">
+            <p class="footer__text">
+                TurboCASH 6 &copy; 2025 Philip Copeman | 
+                <a href="https://github.com/philipdc/turbocash6" target="_blank">GitHub</a> |
+                Licensed under <a href="../LICENSE">MIT License</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>

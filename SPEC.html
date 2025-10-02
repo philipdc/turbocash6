@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TurboCASH 6 - HTML Specification</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+        }
+        h1 { color: #2c3e50; border-bottom: 3px solid #3498db; padding-bottom: 10px; }
+        h2 { color: #34495e; border-bottom: 2px solid #95a5a6; padding-bottom: 8px; margin-top: 30px; }
+        h3 { color: #555; margin-top: 20px; }
+        .section { background: #f8f9fa; padding: 20px; margin: 20px 0; border-radius: 8px; border-left: 4px solid #3498db; }
+        .feature { background: white; padding: 15px; margin: 10px 0; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .tech-stack { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin: 20px 0; }
+        .tech-item { background: white; padding: 15px; border-radius: 5px; border: 2px solid #ecf0f1; }
+        code { background: #e8e8e8; padding: 2px 6px; border-radius: 3px; font-family: 'Courier New', monospace; }
+        ul { margin: 10px 0; }
+        li { margin: 8px 0; }
+        .note { background: #fff3cd; border-left: 4px solid #ffc107; padding: 12px; margin: 15px 0; border-radius: 4px; }
+    </style>
+</head>
+<body>
+    <h1>🚀 TurboCASH 6 Web Application Specification</h1>
+    
+    <div class="section">
+        <h2>Overview</h2>
+        <p>TurboCASH 6 is a modern, open-source accounting and financial management web application built with modern web technologies. This specification document outlines the structure, features, and technical architecture of the application.</p>
+        <p><strong>License:</strong> MIT License - Open for contributions</p>
+        <p><strong>Purpose:</strong> Provide a comprehensive, user-friendly accounting solution accessible via web browser</p>
+    </div>
+
+    <div class="section">
+        <h2>Core Features</h2>
+        
+        <div class="feature">
+            <h3>1. Dashboard</h3>
+            <ul>
+                <li>Financial overview with real-time statistics</li>
+                <li>Recent transactions display</li>
+                <li>Quick action buttons</li>
+                <li>Customizable widgets</li>
+            </ul>
+        </div>
+
+        <div class="feature">
+            <h3>2. Accounts Management</h3>
+            <ul>
+                <li>Chart of accounts</li>
+                <li>Account creation and management</li>
+                <li>Account balances and history</li>
+                <li>Multi-currency support</li>
+            </ul>
+        </div>
+
+        <div class="feature">
+            <h3>3. Transaction Processing</h3>
+            <ul>
+                <li>Journal entries</li>
+                <li>Transaction recording</li>
+                <li>Batch processing</li>
+                <li>Transaction search and filters</li>
+            </ul>
+        </div>
+
+        <div class="feature">
+            <h3>4. Reporting</h3>
+            <ul>
+                <li>Balance sheets</li>
+                <li>Income statements</li>
+                <li>Cash flow statements</li>
+                <li>Custom report builder</li>
+                <li>Export to PDF, Excel, CSV</li>
+            </ul>
+        </div>
+
+        <div class="feature">
+            <h3>5. User Management</h3>
+            <ul>
+                <li>Multi-user support</li>
+                <li>Role-based access control</li>
+                <li>Audit trails</li>
+                <li>User preferences</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Technical Architecture</h2>
+        
+        <h3>Frontend Structure</h3>
+        <div class="tech-stack">
+            <div class="tech-item">
+                <h4>HTML5</h4>
+                <p>Semantic markup for accessibility and SEO</p>
+                <ul>
+                    <li>Responsive layouts</li>
+                    <li>Forms and validation</li>
+                    <li>Progressive Web App support</li>
+                </ul>
+            </div>
+            
+            <div class="tech-item">
+                <h4>CSS3</h4>
+                <p>Modern styling and responsive design</p>
+                <ul>
+                    <li>CSS Grid and Flexbox</li>
+                    <li>Custom properties (variables)</li>
+                    <li>Mobile-first approach</li>
+                </ul>
+            </div>
+            
+            <div class="tech-item">
+                <h4>JavaScript (ES6+)</h4>
+                <p>Interactive functionality</p>
+                <ul>
+                    <li>Module-based architecture</li>
+                    <li>Event-driven programming</li>
+                    <li>API integration</li>
+                </ul>
+            </div>
+        </div>
+
+        <h3>File Structure</h3>
+        <pre><code>
+turbocash6/
+├── public/              # Static assets
+│   ├── index.html      # Main entry point
+│   ├── css/            # Stylesheets
+│   ├── js/             # JavaScript modules
+│   ├── images/         # Images and icons
+│   └── fonts/          # Custom fonts
+├── src/                 # Source code
+│   ├── components/     # Reusable UI components
+│   ├── modules/        # Feature modules
+│   ├── services/       # API and data services
+│   └── utils/          # Helper functions
+├── docs/               # Documentation
+├── tests/              # Test files
+├── SPEC.html           # This specification
+├── CONTRIBUTING.md     # Contribution guidelines
+├── README.md           # Project documentation
+├── LICENSE             # MIT License
+└── package.json        # Dependencies and scripts
+        </code></pre>
+    </div>
+
+    <div class="section">
+        <h2>User Interface Pages</h2>
+        
+        <h3>Navigation Structure</h3>
+        <ul>
+            <li><strong>/</strong> - Dashboard (Home)</li>
+            <li><strong>/accounts</strong> - Accounts Management</li>
+            <li><strong>/transactions</strong> - Transaction List</li>
+            <li><strong>/transactions/new</strong> - New Transaction</li>
+            <li><strong>/reports</strong> - Reports Hub</li>
+            <li><strong>/settings</strong> - User Settings</li>
+            <li><strong>/admin</strong> - Admin Panel</li>
+        </ul>
+
+        <h3>Common UI Components</h3>
+        <ul>
+            <li>Navigation bar with menu</li>
+            <li>Sidebar navigation</li>
+            <li>Data tables with sorting and filtering</li>
+            <li>Forms with validation</li>
+            <li>Modal dialogs</li>
+            <li>Toast notifications</li>
+            <li>Loading indicators</li>
+            <li>Date pickers</li>
+            <li>Search autocomplete</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Data Model</h2>
+        
+        <h3>Core Entities</h3>
+        
+        <div class="feature">
+            <h4>Account</h4>
+            <ul>
+                <li><code>id</code>: Unique identifier</li>
+                <li><code>name</code>: Account name</li>
+                <li><code>type</code>: Asset, Liability, Equity, Revenue, Expense</li>
+                <li><code>code</code>: Account code</li>
+                <li><code>balance</code>: Current balance</li>
+                <li><code>currency</code>: Currency code</li>
+                <li><code>parent_id</code>: Parent account (for hierarchy)</li>
+            </ul>
+        </div>
+
+        <div class="feature">
+            <h4>Transaction</h4>
+            <ul>
+                <li><code>id</code>: Unique identifier</li>
+                <li><code>date</code>: Transaction date</li>
+                <li><code>description</code>: Transaction description</li>
+                <li><code>reference</code>: Reference number</li>
+                <li><code>entries</code>: Array of journal entries</li>
+                <li><code>status</code>: Draft, Posted, Void</li>
+                <li><code>created_by</code>: User who created</li>
+                <li><code>created_at</code>: Timestamp</li>
+            </ul>
+        </div>
+
+        <div class="feature">
+            <h4>Journal Entry</h4>
+            <ul>
+                <li><code>account_id</code>: Account reference</li>
+                <li><code>debit</code>: Debit amount</li>
+                <li><code>credit</code>: Credit amount</li>
+                <li><code>memo</code>: Entry memo</li>
+            </ul>
+        </div>
+
+        <div class="feature">
+            <h4>User</h4>
+            <ul>
+                <li><code>id</code>: Unique identifier</li>
+                <li><code>username</code>: Login username</li>
+                <li><code>email</code>: Email address</li>
+                <li><code>role</code>: Admin, Manager, User, Viewer</li>
+                <li><code>permissions</code>: Array of permissions</li>
+                <li><code>preferences</code>: User settings object</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>API Endpoints (Planned)</h2>
+        
+        <h3>Accounts</h3>
+        <ul>
+            <li><code>GET /api/accounts</code> - List all accounts</li>
+            <li><code>GET /api/accounts/:id</code> - Get account details</li>
+            <li><code>POST /api/accounts</code> - Create new account</li>
+            <li><code>PUT /api/accounts/:id</code> - Update account</li>
+            <li><code>DELETE /api/accounts/:id</code> - Delete account</li>
+        </ul>
+
+        <h3>Transactions</h3>
+        <ul>
+            <li><code>GET /api/transactions</code> - List transactions</li>
+            <li><code>GET /api/transactions/:id</code> - Get transaction details</li>
+            <li><code>POST /api/transactions</code> - Create transaction</li>
+            <li><code>PUT /api/transactions/:id</code> - Update transaction</li>
+            <li><code>DELETE /api/transactions/:id</code> - Delete transaction</li>
+            <li><code>POST /api/transactions/:id/post</code> - Post transaction</li>
+        </ul>
+
+        <h3>Reports</h3>
+        <ul>
+            <li><code>GET /api/reports/balance-sheet</code> - Generate balance sheet</li>
+            <li><code>GET /api/reports/income-statement</code> - Generate income statement</li>
+            <li><code>GET /api/reports/cash-flow</code> - Generate cash flow statement</li>
+            <li><code>GET /api/reports/trial-balance</code> - Generate trial balance</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Design Principles</h2>
+        <ul>
+            <li><strong>Simplicity:</strong> Clean, intuitive interface</li>
+            <li><strong>Accessibility:</strong> WCAG 2.1 AA compliance</li>
+            <li><strong>Performance:</strong> Fast load times and responsive interactions</li>
+            <li><strong>Security:</strong> Input validation, CSRF protection, secure authentication</li>
+            <li><strong>Modularity:</strong> Reusable components and clear separation of concerns</li>
+            <li><strong>Progressive Enhancement:</strong> Works without JavaScript, enhanced with it</li>
+            <li><strong>Mobile-First:</strong> Responsive design starting from mobile</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Contribution Guidelines</h2>
+        <div class="note">
+            <strong>Note:</strong> This project is open-source under the MIT License. We welcome contributions from the community!
+        </div>
+        
+        <h3>How to Contribute</h3>
+        <ul>
+            <li>Fork the repository</li>
+            <li>Create a feature branch</li>
+            <li>Follow coding standards and conventions</li>
+            <li>Write tests for new features</li>
+            <li>Submit a pull request with clear description</li>
+            <li>Respond to code review feedback</li>
+        </ul>
+
+        <h3>Coding Standards</h3>
+        <ul>
+            <li>Use semantic HTML5</li>
+            <li>Follow BEM methodology for CSS</li>
+            <li>Use ES6+ JavaScript features</li>
+            <li>Comment complex logic</li>
+            <li>Keep functions small and focused</li>
+            <li>Write descriptive variable and function names</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Development Roadmap</h2>
+        
+        <h3>Phase 1: Foundation (Current)</h3>
+        <ul>
+            <li>✅ Project structure setup</li>
+            <li>✅ HTML specification document</li>
+            <li>🔄 Basic HTML pages and navigation</li>
+            <li>🔄 Core CSS styling</li>
+            <li>⬜ JavaScript module structure</li>
+        </ul>
+
+        <h3>Phase 2: Core Features</h3>
+        <ul>
+            <li>⬜ Dashboard implementation</li>
+            <li>⬜ Account management</li>
+            <li>⬜ Transaction processing</li>
+            <li>⬜ Basic reporting</li>
+        </ul>
+
+        <h3>Phase 3: Enhancement</h3>
+        <ul>
+            <li>⬜ Advanced reporting</li>
+            <li>⬜ User management and authentication</li>
+            <li>⬜ Data import/export</li>
+            <li>⬜ Multi-currency support</li>
+        </ul>
+
+        <h3>Phase 4: Production Ready</h3>
+        <ul>
+            <li>⬜ Performance optimization</li>
+            <li>⬜ Security hardening</li>
+            <li>⬜ Comprehensive testing</li>
+            <li>⬜ Documentation completion</li>
+            <li>⬜ Deployment guide</li>
+        </ul>
+    </div>
+
+    <footer style="margin-top: 40px; padding-top: 20px; border-top: 2px solid #ecf0f1; text-align: center; color: #7f8c8d;">
+        <p><strong>TurboCASH 6</strong> - Open Source Accounting Software</p>
+        <p>Licensed under MIT License | Copyright (c) 2025 Philip Copeman</p>
+        <p>For more information, visit the <a href="https://github.com/philipdc/turbocash6">GitHub Repository</a></p>
+    </footer>
+</body>
+</html>

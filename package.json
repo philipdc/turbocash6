@@ -1,0 +1,35 @@
+{
+  "name": "turbocash6",
+  "version": "0.1.0",
+  "description": "TurboCASH 6 - Open Source Accounting Web Application",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "test": "echo \"Tests will be added\" && exit 0",
+    "lint": "echo \"Linting will be configured\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/philipdc/turbocash6.git"
+  },
+  "keywords": [
+    "accounting",
+    "finance",
+    "web-app",
+    "open-source",
+    "bookkeeping",
+    "financial-management"
+  ],
+  "author": "Philip Copeman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/philipdc/turbocash6/issues"
+  },
+  "homepage": "https://github.com/philipdc/turbocash6#readme",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
